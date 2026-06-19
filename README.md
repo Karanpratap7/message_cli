@@ -1,10 +1,12 @@
-Message CLI
+# Message CLI
 
 Send iMessages directly from your terminal using your macOS Contacts.
 
 Example:
 
+```bash
 message "@John Doe" "Hello from terminal"
+```
 
 This project:
 
@@ -13,9 +15,9 @@ This project:
 * Sends messages through iMessage
 * Supports spaces in contact names
 
-⸻
+---
 
-Requirements
+## Requirements
 
 * macOS
 * Python 3
@@ -24,75 +26,93 @@ Requirements
 
 Check Python:
 
+```bash
 python --version
+```
 
-⸻
+---
 
-Project Structure
+## Project Structure
 
+```text
 message-cli/
 │
 ├── send.py
 ├── contacts.py
 └── message
+```
 
-⸻
+---
 
-Installation
+## Installation
 
 Clone:
 
+```bash
 git clone <repo-url>
 cd message-cli
+```
 
 No external packages required.
 
-⸻
+---
 
-Setup
+## Setup
 
-1. Make terminal command executable
+### 1. Make terminal command executable
 
+```bash
 chmod +x message
+```
 
 Move command into PATH:
 
+```bash
 sudo mv message /usr/local/bin/
+```
 
-⸻
-
-2. Configure script path
+### 2. Configure script path
 
 Edit:
 
+```bash
 nano /usr/local/bin/message
+```
 
 Example:
 
+```zsh
 #!/bin/zsh
 python /Users/YOUR_USERNAME/message-cli/send.py "$@"
+```
 
 Save:
 
+```text
 Ctrl + O
 Enter
 Ctrl + X
+```
 
-⸻
+---
 
-Usage
+## Usage
 
 Send message:
 
+```bash
 message "@Mom" "Reached safely"
+```
 
 Contact with spaces:
 
+```bash
 message "@Roommate" "Send notes"
+```
 
-⸻
+---
 
-How It Works
+## How It Works
 
 1. User runs terminal command
 2. Python extracts contact name
@@ -102,6 +122,7 @@ How It Works
 
 Flow:
 
+```text
 Terminal
    ↓
 Python
@@ -111,47 +132,50 @@ Contacts (AppleScript)
 Messages
    ↓
 Recipient
+```
 
-⸻
+---
 
-Troubleshooting
+## Troubleshooting
 
-Contact not found
+### Contact not found
 
 Check exact contact name:
 
+```bash
 python send.py "@Contact"
+```
 
-⸻
-
-Sends SMS instead of iMessage
+### Sends SMS instead of iMessage
 
 Open Messages and verify:
 
+```text
 Settings
 → iMessage
 → Enabled
+```
 
 Confirm recipient supports iMessage.
 
-⸻
-
-Permission issues
+### Permission issues
 
 Grant access:
 
+```text
 System Settings
 → Privacy & Security
 → Automation
+```
 
 Allow:
 
 * Terminal → Contacts
 * Terminal → Messages
 
-⸻
+---
 
-Future Improvements
+## Future Improvements
 
 * Fuzzy search
 * Group messaging
@@ -161,6 +185,6 @@ Future Improvements
 * Voice commands
 * Scheduled messages
 
-⸻
+---
 
 Built with Python + AppleScript + excessive confidence in terminal workflows.
