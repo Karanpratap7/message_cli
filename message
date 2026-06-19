@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+python {project_root}/send.py "$1" "$2"
