@@ -1,7 +1,7 @@
 # Message CLI
 
 Send iMessages directly from your terminal using your macOS Contacts.
-"Made this just cause switching windows was breaking my flow and I got annoyed and the tinkering spirit in me wanted a solution."
+# "Made this just cause switching windows was breaking my flow and I got annoyed and the tinkering spirit in me wanted a solution."
 
 Example:
 
